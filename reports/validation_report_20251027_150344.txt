@@ -1,0 +1,138 @@
+====================================================================================================
+                              SOLIDIGM VALIDATION REPORT
+====================================================================================================
+
+VALIDATION INFORMATION
+----------------------------------------------------------------------------------------------------
+URL: https://www.solidigm.com/
+Locale: US/EN
+Timestamp: 2025-10-27 15:03:44
+
+OVERALL SUMMARY
+----------------------------------------------------------------------------------------------------
+Total UI Validations Performed: 23
+UI Validations Passed: 10
+UI Validations Failed: 13
+Total Links Checked: 108
+Valid Links: 104
+Broken Links: 4
+
+UI VALIDATION DETAILS
+----------------------------------------------------------------------------------------------------
+Total UI Checks: 23
+Passed: 10
+Failed: 13
+Pass Percentage: 43.48%
+
+CATEGORY BREAKDOWN
+----------------------------------------------------------------------------------------------------
+
+FONT SIZE:
+  Total: 5
+  Passed: 3
+  Failed: 2
+  Failure Details:
+    - Font size failed for h1
+    - Font size failed for h3
+
+FONT COLOR:
+  Total: 3
+  Passed: 0
+  Failed: 3
+  Failure Details:
+    - Font color failed for h1 - Expected: rgb(0, 0, 0), Got: rgb(255, 255, 255)
+    - Font color failed for h2 - Expected: rgb(0, 0, 0), Got: rgb(255, 255, 255)
+    - Font color failed for p - Expected: rgb(0, 0, 0), Got: rgb(255, 255, 255)
+
+ELEMENT SIZE:
+  Total: 2
+  Passed: 0
+  Failed: 2
+  Failure Details:
+    - Size mismatch for header - Expected: 1920x100, Got: 1904.800048828125x0
+    - Size mismatch for footer - Expected: 1920x200, Got: 1904.800048828125x1307.4000244140625
+
+IMAGES:
+  Total: 3
+  Passed: 1
+  Failed: 2
+  Failure Details:
+    - Image 3 failed to load
+    - Image 5 failed to load
+
+BUTTONS:
+  Total: 5
+  Passed: 4
+  Failed: 1
+  Failure Details:
+    - Button 3 failed - visible: False, enabled: True
+
+NAVIGATION:
+  Total: 5
+  Passed: 2
+  Failed: 3
+  Failure Details:
+    - Navigation link 3 failed - text: 'Solid State Drives (SSDs)', href: https://www.solidigm.com/products/data-center.html, visible: False
+    - Navigation link 4 failed - text: 'Where to Buy ', href: https://www.solidigm.com/products/where-to-buy.html, visible: False
+    - Navigation link 5 failed - text: 'Change Notifications (PCN) ', href: https://www.solidigm.com/products/document-management-system.html, visible: False
+
+LINK VALIDATION DETAILS
+----------------------------------------------------------------------------------------------------
+Total Links: 108
+Valid Links: 104
+Broken Links: 4
+
+BROKEN LINKS:
+----------------------------------------------------------------------------------------------------
+  URL: https://www.solidigm.com/my-solidigm.html?ref=login
+  Text: Log In
+  Status: 401
+  Message: Link invalid: https://www.solidigm.com/my-solidigm.html?ref=login (Status: 401)
+
+  URL: https://www.linkedin.com/company/solidigmtechnology/
+  Text: LinkedIn
+  Status: 999
+  Message: Link invalid: https://www.linkedin.com/company/solidigmtechnology/ (Status: 999)
+
+  URL: https://twitter.com/solidigm
+  Text: 
+  Status: 403
+  Message: Link invalid: https://twitter.com/solidigm (Status: 403)
+
+  URL: https://trustarc.com/
+  Text: 
+  Status: 403
+  Message: Link invalid: https://trustarc.com/ (Status: 403)
+
+
+FAILURE SUMMARY
+----------------------------------------------------------------------------------------------------
+
+FONT SIZE - 2 failures:
+  • Font size failed for h1
+  • Font size failed for h3
+
+FONT COLOR - 3 failures:
+  • Font color failed for h1 - Expected: rgb(0, 0, 0), Got: rgb(255, 255, 255)
+  • Font color failed for h2 - Expected: rgb(0, 0, 0), Got: rgb(255, 255, 255)
+  • Font color failed for p - Expected: rgb(0, 0, 0), Got: rgb(255, 255, 255)
+
+ELEMENT SIZE - 2 failures:
+  • Size mismatch for header - Expected: 1920x100, Got: 1904.800048828125x0
+  • Size mismatch for footer - Expected: 1920x200, Got: 1904.800048828125x1307.4000244140625
+
+IMAGES - 2 failures:
+  • Image 3 failed to load
+  • Image 5 failed to load
+
+BUTTONS - 1 failures:
+  • Button 3 failed - visible: False, enabled: True
+
+NAVIGATION - 3 failures:
+  • Navigation link 3 failed - text: 'Solid State Drives (SSDs)', href: https://www.solidigm.com/products/data-center.html, visible: False
+  • Navigation link 4 failed - text: 'Where to Buy ', href: https://www.solidigm.com/products/where-to-buy.html, visible: False
+  • Navigation link 5 failed - text: 'Change Notifications (PCN) ', href: https://www.solidigm.com/products/document-management-system.html, visible: False
+
+====================================================================================================
+Report generated at: 2025-10-27 15:03:44
+====================================================================================================

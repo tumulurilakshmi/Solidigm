@@ -1,0 +1,9 @@
+# Solidigm URL Validation List
+# Format: URL | locale
+# Lines starting with # are comments
+
+https://www.solidigm.com/ | US/EN
+# Add more URLs below as needed
+# https://www.solidigm.com/products | US/EN
+# https://www.solidigm.com/support | US/EN
+

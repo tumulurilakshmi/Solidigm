@@ -1,0 +1,8 @@
+{
+  "validation_info": {
+    "url": "https://www.solidigm.com/",
+    "locale": "US/EN",
+    "timestamp": ""
+  },
+  "error": "Timeout 10000ms exceeded.\n=========================== logs ===========================\n\"load\" event fired\n============================================================"
+}

@@ -1,0 +1,434 @@
+{
+  "validation_info": {
+    "url": "https://www.solidigm.com/",
+    "locale": "US/EN",
+    "timestamp": "2025-10-27 13:43:47"
+  },
+  "ui_validation": {
+    "url": "https://www.solidigm.com/",
+    "locale": "US/EN",
+    "timestamp": "2025-10-27 13:41:16",
+    "validations": [
+      {
+        "type": "font_size",
+        "selector": "h1",
+        "expected": "48px",
+        "passed": false,
+        "message": "Font size mismatch: 63.9999px (expected: 48px)",
+        "count_found": 8,
+        "details": "Font size failed for h1"
+      },
+      {
+        "type": "font_size",
+        "selector": "h2",
+        "expected": "36px",
+        "passed": true,
+        "message": "Font size valid: 40px (expected: 36px)",
+        "count_found": 5
+      },
+      {
+        "type": "font_size",
+        "selector": "h3",
+        "expected": "24px",
+        "passed": false,
+        "message": "Font size mismatch: 42.6666px (expected: 24px)",
+        "count_found": 13,
+        "details": "Font size failed for h3"
+      },
+      {
+        "type": "font_size",
+        "selector": "p",
+        "expected": "16px",
+        "passed": true,
+        "message": "Font size valid: 15px (expected: 16px)",
+        "count_found": 24
+      },
+      {
+        "type": "font_size",
+        "selector": ".main-menu a, nav a",
+        "expected": "14px",
+        "passed": true,
+        "message": "Font size valid: 15px (expected: 14px)",
+        "count_found": 65
+      },
+      {
+        "type": "font_color",
+        "selector": "h1",
+        "expected": "rgb(0, 0, 0)",
+        "actual": "rgb(255, 255, 255)",
+        "passed": false,
+        "message": "Color mismatch: rgb(255, 255, 255) (expected: rgb(0, 0, 0))",
+        "count_found": 8,
+        "details": "Font color failed for h1 - Expected: rgb(0, 0, 0), Got: rgb(255, 255, 255)"
+      },
+      {
+        "type": "font_color",
+        "selector": "h2",
+        "expected": "rgb(0, 0, 0)",
+        "actual": "rgb(255, 255, 255)",
+        "passed": false,
+        "message": "Color mismatch: rgb(255, 255, 255) (expected: rgb(0, 0, 0))",
+        "count_found": 5,
+        "details": "Font color failed for h2 - Expected: rgb(0, 0, 0), Got: rgb(255, 255, 255)"
+      },
+      {
+        "type": "font_color",
+        "selector": "p",
+        "expected": "rgb(0, 0, 0)",
+        "actual": "rgb(255, 255, 255)",
+        "passed": false,
+        "message": "Color mismatch: rgb(255, 255, 255) (expected: rgb(0, 0, 0))",
+        "count_found": 24,
+        "details": "Font color failed for p - Expected: rgb(0, 0, 0), Got: rgb(255, 255, 255)"
+      },
+      {
+        "type": "element_size",
+        "selector": "header",
+        "expected": "1920x100",
+        "actual": "1904.800048828125x0",
+        "passed": false,
+        "message": "Size: 1904.800048828125x0 (expected: 1920x100)",
+        "count_found": 1,
+        "details": "Size mismatch for header - Expected: 1920x100, Got: 1904.800048828125x0"
+      },
+      {
+        "type": "element_size",
+        "selector": "footer",
+        "expected": "1920x200",
+        "actual": "1904.800048828125x1307.4000244140625",
+        "passed": false,
+        "message": "Size: 1904.800048828125x1307.4000244140625 (expected: 1920x200)",
+        "count_found": 1,
+        "details": "Size mismatch for footer - Expected: 1920x200, Got: 1904.800048828125x1307.4000244140625"
+      },
+      {
+        "type": "image",
+        "index": 1,
+        "passed": true,
+        "message": "Image loaded successfully: img:nth-of-type(1)"
+      },
+      {
+        "type": "image",
+        "index": 3,
+        "passed": false,
+        "message": "Image not found: img:nth-of-type(3)",
+        "details": "Image 3 failed to load"
+      },
+      {
+        "type": "image",
+        "index": 5,
+        "passed": false,
+        "message": "Image not found: img:nth-of-type(5)",
+        "details": "Image 5 failed to load"
+      },
+      {
+        "type": "button",
+        "index": 1,
+        "text": "\n        \n          \n        \n      ",
+        "passed": true,
+        "visible": true,
+        "enabled": true,
+        "message": "Button '\n        \n          \n        \n...' - visible: True, enabled: True"
+      },
+      {
+        "type": "button",
+        "index": 2,
+        "text": "\n                  \n                    \n         ",
+        "passed": true,
+        "visible": true,
+        "enabled": true,
+        "message": "Button '\n                  \n          ...' - visible: True, enabled: True"
+      },
+      {
+        "type": "button",
+        "index": 3,
+        "text": "\n                \n                  \n             ",
+        "passed": false,
+        "visible": false,
+        "enabled": true,
+        "message": "Button '\n                \n            ...' - visible: False, enabled: True",
+        "details": "Button 3 failed - visible: False, enabled: True"
+      },
+      {
+        "type": "button",
+        "index": 4,
+        "text": "",
+        "passed": true,
+        "visible": true,
+        "enabled": true,
+        "message": "Button '...' - visible: True, enabled: True"
+      },
+      {
+        "type": "button",
+        "index": 5,
+        "text": "",
+        "passed": true,
+        "visible": true,
+        "enabled": true,
+        "message": "Button '...' - visible: True, enabled: True"
+      },
+      {
+        "type": "navigation",
+        "index": 1,
+        "text": "\n            \n          ",
+        "href": "/",
+        "passed": true,
+        "visible": true,
+        "message": "Nav link '\n            \n          ' - href: /, visible: True"
+      },
+      {
+        "type": "navigation",
+        "index": 2,
+        "text": "\n                \n                  Product\n                \n                \n              ",
+        "href": "javascript:void(0)",
+        "passed": true,
+        "visible": true,
+        "message": "Nav link '\n                \n                  Product\n                \n                \n              ' - href: javascript:void(0), visible: True"
+      },
+      {
+        "type": "navigation",
+        "index": 3,
+        "text": "Solid State Drives (SSDs)",
+        "href": "/products/data-center.html",
+        "passed": false,
+        "visible": false,
+        "message": "Nav link 'Solid State Drives (SSDs)' - href: /products/data-center.html, visible: False",
+        "details": "Navigation link 3 failed - text: 'Solid State Drives (SSDs)', href: /products/data-center.html, visible: False"
+      },
+      {
+        "type": "navigation",
+        "index": 4,
+        "text": "Where to Buy ",
+        "href": "/products/where-to-buy.html",
+        "passed": false,
+        "visible": false,
+        "message": "Nav link 'Where to Buy ' - href: /products/where-to-buy.html, visible: False",
+        "details": "Navigation link 4 failed - text: 'Where to Buy ', href: /products/where-to-buy.html, visible: False"
+      },
+      {
+        "type": "navigation",
+        "index": 5,
+        "text": "Change Notifications (PCN) ",
+        "href": "/products/document-management-system.html",
+        "passed": false,
+        "visible": false,
+        "message": "Nav link 'Change Notifications (PCN) ' - href: /products/document-management-system.html, visible: False",
+        "details": "Navigation link 5 failed - text: 'Change Notifications (PCN) ', href: /products/document-management-system.html, visible: False"
+      }
+    ],
+    "summary": {
+      "total_validations": 23,
+      "passed": 10,
+      "failed": 13,
+      "pass_percentage": 43.48,
+      "by_category": {
+        "font_size": {
+          "total": 5,
+          "passed": 3,
+          "failed": 2,
+          "details": [
+            {
+              "type": "font_size",
+              "selector": "h1",
+              "expected": "48px",
+              "passed": false,
+              "message": "Font size mismatch: 63.9999px (expected: 48px)",
+              "count_found": 8,
+              "details": "Font size failed for h1"
+            },
+            {
+              "type": "font_size",
+              "selector": "h3",
+              "expected": "24px",
+              "passed": false,
+              "message": "Font size mismatch: 42.6666px (expected: 24px)",
+              "count_found": 13,
+              "details": "Font size failed for h3"
+            }
+          ]
+        },
+        "font_color": {
+          "total": 3,
+          "passed": 0,
+          "failed": 3,
+          "details": [
+            {
+              "type": "font_color",
+              "selector": "h1",
+              "expected": "rgb(0, 0, 0)",
+              "actual": "rgb(255, 255, 255)",
+              "passed": false,
+              "message": "Color mismatch: rgb(255, 255, 255) (expected: rgb(0, 0, 0))",
+              "count_found": 8,
+              "details": "Font color failed for h1 - Expected: rgb(0, 0, 0), Got: rgb(255, 255, 255)"
+            },
+            {
+              "type": "font_color",
+              "selector": "h2",
+              "expected": "rgb(0, 0, 0)",
+              "actual": "rgb(255, 255, 255)",
+              "passed": false,
+              "message": "Color mismatch: rgb(255, 255, 255) (expected: rgb(0, 0, 0))",
+              "count_found": 5,
+              "details": "Font color failed for h2 - Expected: rgb(0, 0, 0), Got: rgb(255, 255, 255)"
+            },
+            {
+              "type": "font_color",
+              "selector": "p",
+              "expected": "rgb(0, 0, 0)",
+              "actual": "rgb(255, 255, 255)",
+              "passed": false,
+              "message": "Color mismatch: rgb(255, 255, 255) (expected: rgb(0, 0, 0))",
+              "count_found": 24,
+              "details": "Font color failed for p - Expected: rgb(0, 0, 0), Got: rgb(255, 255, 255)"
+            }
+          ]
+        },
+        "element_size": {
+          "total": 2,
+          "passed": 0,
+          "failed": 2,
+          "details": [
+            {
+              "type": "element_size",
+              "selector": "header",
+              "expected": "1920x100",
+              "actual": "1904.800048828125x0",
+              "passed": false,
+              "message": "Size: 1904.800048828125x0 (expected: 1920x100)",
+              "count_found": 1,
+              "details": "Size mismatch for header - Expected: 1920x100, Got: 1904.800048828125x0"
+            },
+            {
+              "type": "element_size",
+              "selector": "footer",
+              "expected": "1920x200",
+              "actual": "1904.800048828125x1307.4000244140625",
+              "passed": false,
+              "message": "Size: 1904.800048828125x1307.4000244140625 (expected: 1920x200)",
+              "count_found": 1,
+              "details": "Size mismatch for footer - Expected: 1920x200, Got: 1904.800048828125x1307.4000244140625"
+            }
+          ]
+        },
+        "images": {
+          "total": 3,
+          "passed": 1,
+          "failed": 2,
+          "details": [
+            {
+              "type": "image",
+              "index": 3,
+              "passed": false,
+              "message": "Image not found: img:nth-of-type(3)",
+              "details": "Image 3 failed to load"
+            },
+            {
+              "type": "image",
+              "index": 5,
+              "passed": false,
+              "message": "Image not found: img:nth-of-type(5)",
+              "details": "Image 5 failed to load"
+            }
+          ]
+        },
+        "buttons": {
+          "total": 5,
+          "passed": 4,
+          "failed": 1,
+          "details": [
+            {
+              "type": "button",
+              "index": 3,
+              "text": "\n                \n                  \n             ",
+              "passed": false,
+              "visible": false,
+              "enabled": true,
+              "message": "Button '\n                \n            ...' - visible: False, enabled: True",
+              "details": "Button 3 failed - visible: False, enabled: True"
+            }
+          ]
+        },
+        "navigation": {
+          "total": 5,
+          "passed": 2,
+          "failed": 3,
+          "details": [
+            {
+              "type": "navigation",
+              "index": 3,
+              "text": "Solid State Drives (SSDs)",
+              "href": "/products/data-center.html",
+              "passed": false,
+              "visible": false,
+              "message": "Nav link 'Solid State Drives (SSDs)' - href: /products/data-center.html, visible: False",
+              "details": "Navigation link 3 failed - text: 'Solid State Drives (SSDs)', href: /products/data-center.html, visible: False"
+            },
+            {
+              "type": "navigation",
+              "index": 4,
+              "text": "Where to Buy ",
+              "href": "/products/where-to-buy.html",
+              "passed": false,
+              "visible": false,
+              "message": "Nav link 'Where to Buy ' - href: /products/where-to-buy.html, visible: False",
+              "details": "Navigation link 4 failed - text: 'Where to Buy ', href: /products/where-to-buy.html, visible: False"
+            },
+            {
+              "type": "navigation",
+              "index": 5,
+              "text": "Change Notifications (PCN) ",
+              "href": "/products/document-management-system.html",
+              "passed": false,
+              "visible": false,
+              "message": "Nav link 'Change Notifications (PCN) ' - href: /products/document-management-system.html, visible: False",
+              "details": "Navigation link 5 failed - text: 'Change Notifications (PCN) ', href: /products/document-management-system.html, visible: False"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "link_validation": {
+    "url": "https://www.solidigm.com/",
+    "locale": "US/EN",
+    "timestamp": "2025-10-27 13:41:17",
+    "total_links": 108,
+    "valid_links": 104,
+    "broken_links": 4,
+    "broken_details": [
+      {
+        "url": "https://www.solidigm.com/my-solidigm.html?ref=login",
+        "text": "Log In",
+        "status_code": 401,
+        "message": "Link invalid: https://www.solidigm.com/my-solidigm.html?ref=login (Status: 401)"
+      },
+      {
+        "url": "https://www.linkedin.com/company/solidigmtechnology/",
+        "text": "LinkedIn",
+        "status_code": 999,
+        "message": "Link invalid: https://www.linkedin.com/company/solidigmtechnology/ (Status: 999)"
+      },
+      {
+        "url": "https://twitter.com/solidigm",
+        "text": "",
+        "status_code": 403,
+        "message": "Link invalid: https://twitter.com/solidigm (Status: 403)"
+      },
+      {
+        "url": "https://trustarc.com/",
+        "text": "",
+        "status_code": 403,
+        "message": "Link invalid: https://trustarc.com/ (Status: 403)"
+      }
+    ]
+  },
+  "overall_summary": {
+    "total_ui_validations": 23,
+    "passed_ui_validations": 10,
+    "failed_ui_validations": 13,
+    "total_links": 108,
+    "valid_links": 104,
+    "broken_links": 4
+  }
+}
