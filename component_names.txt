@@ -1,0 +1,38 @@
+Component Names Used in Article List Validator
+================================================
+
+Main Container Components:
+--------------------------
+.articlelist
+.cmp-article-list__articles-container
+
+Article Card Components:
+------------------------
+.cmp-article-list__article
+.cmp-article-list__article-title
+.cmp-article-list__article-category
+.cmp-article-list__article-image
+
+Section Title Components:
+--------------------------
+.section-title--with-link
+
+Splide Carousel Components:
+----------------------------
+.splide__slide
+.splide__slide--clone
+.splide__slide.is-visible
+.splide__slide.is-active
+.splide__arrow--prev
+.splide__arrow--next
+.splide__pagination__page
+
+HTML Elements Used:
+-------------------
+h2 (section title)
+h3 (article title)
+a (links)
+img (images)
+button[aria-label*="Previous"] (left chevron)
+button[aria-label*="Next"] (right chevron)
+

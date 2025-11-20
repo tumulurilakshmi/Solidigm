@@ -19,8 +19,11 @@ ENV/
 # Reports and Output
 reports/
 *.xlsx
-*.txt
-*.json
+# Allow specific JSON and TXT files (config files, not reports)
+!product_series.json
+!requirements.txt
+!component_names.txt
+!urls.txt
 *.html
 screenshots/
 
