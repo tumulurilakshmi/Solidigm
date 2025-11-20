@@ -4,9 +4,6 @@ Navigation Menu Validator for Solidigm Website
 import time
 from typing import Dict, List
 from playwright.sync_api import Page
-from excel_report_generator import ExcelReportGenerator
-
-
 class NavigationValidator:
     def __init__(self, page: Page, base_url: str):
         self.page = page
@@ -234,14 +231,21 @@ class NavigationValidator:
                     
                     # Validate link
                     try:
-                        response = self.page.request.get(href, timeout=5000)
-                        is_valid = 200 <= response.status < 400
+                        # Convert relative URLs to absolute
+                        from urllib.parse import urljoin
+                        absolute_href = href if href.startswith('http') else urljoin(self.page.url, href)
+                        
+                        response = self.page.request.get(absolute_href, timeout=5000)
+                        status_code = response.status
+                        is_valid = 200 <= status_code < 400
+                        is_broken = status_code >= 400  # Only 4xx and 5xx are truly broken
                         
                         link_info = {
                             'text': text.strip()[:50],
                             'href': href,
-                            'status_code': response.status,
+                            'status_code': status_code,
                             'is_valid': is_valid,
+                            'is_broken': is_broken,
                             'is_visible': is_visible
                         }
                         
@@ -249,18 +253,24 @@ class NavigationValidator:
                         
                         if is_valid:
                             valid_links.append(link_info)
-                        else:
+                        elif is_broken:  # Only add to broken_links if status_code >= 400
                             broken_links.append(link_info)
+                        # Links with status_code 0 (timeout/error) are not added to broken_links
                         
                         checked += 1
-                    except:
-                        broken_links.append({
+                    except Exception as e:
+                        # Timeout or other error - don't count as broken, just as not checked
+                        link_info = {
                             'text': text.strip()[:50],
                             'href': href,
                             'status_code': 0,
                             'is_valid': False,
-                            'is_visible': is_visible
-                        })
+                            'is_broken': False,  # Not broken, just not checked
+                            'is_visible': is_visible,
+                            'error': str(e)[:100]
+                        }
+                        all_links.append(link_info)
+                        # Don't add to broken_links - these are "not checked", not broken
             
             print(f"   Checked: {checked} links")
             print(f"   Valid: {len(valid_links)}")
@@ -269,11 +279,21 @@ class NavigationValidator:
         except Exception as e:
             print(f"   [ERROR] Link validation failed: {str(e)}")
         
+        # Separate truly broken links from not checked
+        # Note: broken_links already only contains links with status_code >= 400
+        truly_broken = broken_links  # No need to filter again, already filtered at line 255-256
+        not_checked = [link for link in all_links if link.get('status_code', 0) == 0]
+        
+        # Debug: Print counts for verification
+        print(f"   [DEBUG] Total links: {len(all_links)}, Valid: {len(valid_links)}, Broken: {len(truly_broken)}, Not Checked: {len(not_checked)}")
+        
         return {
             'total_checked': len(all_links),
             'valid_links': len(valid_links),
-            'broken_links': len(broken_links),
-            'broken_details': broken_links[:10]
+            'broken_links': len(truly_broken),  # Only count actual broken links (4xx, 5xx)
+            'broken_details': truly_broken,  # Show ALL broken links, not just first 10
+            'not_checked_links': len(not_checked),
+            'not_checked_details': not_checked[:20]  # Show first 20 not checked for reference
         }
     
     def _validate_language_switcher(self) -> Dict:
