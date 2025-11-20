@@ -1,0 +1,117 @@
+{
+  "product_series": [
+    {
+      "series": "D3",
+      "name": "SSD D3 Series",
+      "url": "https://www.solidigm.com/products/data-center/d3.html",
+      "description": "Value-optimized SSDs engineered to accelerate storage performance and reduce Total Cost of Ownership while preserving legacy infrastructure with exceptional reliability.",
+      "products": [
+        {
+          "id": "D3-S4620",
+          "name": "D3-S4620",
+          "description": "Mid-endurance SATA drives available in capacities up to 3.84 TB, designed to increase server efficiency and boost IOPS/TB performance over legacy hard disk drives (HDDs).",
+          "interface": "SATA 3.0 6Gb/s",
+          "form_factor": "2.5\" 7mm",
+          "capacity": "3.84TB - 480GB"
+        },
+        {
+          "id": "D3-S4520",
+          "name": "D3-S4520",
+          "description": "Standard-endurance SATA drives with capacities up to 7.68 TB, designed to increase server efficiency and boost IOPS/TB performance over legacy hard disk drives (HDDs) for cloud storage.",
+          "interface": "SATA 3.0 6Gb/s",
+          "form_factor": "2.5\" 7mm / M.2 80mm",
+          "capacity": "7.68TB - 240GB"
+        }
+      ],
+      "product_count": 2
+    },
+    {
+      "series": "D5",
+      "name": "D5 Series SSDs",
+      "url": "https://www.solidigm.com/products/data-center/d5.html",
+      "description": "Hyper-dense, power-efficient SSDs optimized for read-intensive, data-intensive, and mainstream workloads. Maximize space, power, and capacity with our flagship, industry-leading 122TB D5-P5336 SSDs.",
+      "products": [
+        {
+          "id": "D5-P5336",
+          "name": "D5-P5336",
+          "description": "Optimized for the edge to the core, the D5-P5336 is a hyper-scalable, cost-effective solution that lets you efficiently accelerate data.",
+          "interface": "PCIe 4.0 x4, NVMe",
+          "form_factor": "U.2 15mm / E3.S 7.5mm / E1.L 9.5mm",
+          "capacity": "122.88TB - 7.68TB"
+        },
+        {
+          "id": "D5-P5430",
+          "name": "D5-P5430",
+          "description": "Discover the hyper-dense D5-P5430 QLC SSD, a PCIe 4.0 drive with capacities up to 30.72TB. TLC-level performance for mainstream, read-intensive workloads.",
+          "interface": "PCIe 4.0 x4, NVMe",
+          "form_factor": "U.2 15mm / E3.S 7.5mm / E1.S 9.5mm",
+          "capacity": "30.72TB - 3.84TB"
+        },
+        {
+          "id": "D5-P5316",
+          "name": "D5-P5316",
+          "description": "Discover the D5-P5316, highly efficient, read-optimized PCIe 4.0 drives with capacities up to 30.72 TB, designed for read-intensive and sequential workloads.",
+          "interface": "PCIe 4.0 x4, NVMe",
+          "form_factor": "E1.L / U.2 15mm",
+          "capacity": "30.72TB - 15.36TB"
+        }
+      ],
+      "product_count": 3
+    },
+    {
+      "series": "D7",
+      "name": "SSD D7 Series",
+      "url": "https://www.solidigm.com/products/data-center/d7.html",
+      "description": "Our highest-performing family of SSDs, the Solidigm D7 Series is engineered for the most demanding workloads.",
+      "products": [
+        {
+          "id": "D7-PS1030",
+          "name": "D7-PS1030",
+          "description": "Discover Gen5 PCIe 5.0 performance with mid-endurance and capacities up to 12.8TB, designed to accelerate write-centric and mixed workloads.",
+          "interface": "PCIe 5.0 x4, NVMe",
+          "form_factor": "E3.S 7.5mm / U.2 15mm",
+          "capacity": "12.8TB - 1.6TB"
+        },
+        {
+          "id": "D7-PS1010",
+          "name": "D7-PS1010",
+          "description": "Class-leading PCIe 5.0 performance with standard endurance and capacities up to 15.36TB, designed to accelerate mainstream workloads.",
+          "interface": "PCIe 5.0 x4, NVMe",
+          "form_factor": "E3.S 7.5mm / U.2 15mm / E1.S 9.5mm / E1.S 15mm",
+          "capacity": "15.36TB - 1.92TB"
+        },
+        {
+          "id": "D7-P5810",
+          "name": "D7-P5810",
+          "description": "Product details to be added",
+          "interface": "TBD",
+          "form_factor": "TBD",
+          "capacity": "TBD"
+        },
+        {
+          "id": "D7-P5620",
+          "name": "D7-P5620",
+          "description": "Product details to be added",
+          "interface": "TBD",
+          "form_factor": "TBD",
+          "capacity": "TBD"
+        },
+        {
+          "id": "D7-P5520",
+          "name": "D7-P5520",
+          "description": "Product details to be added",
+          "interface": "TBD",
+          "form_factor": "TBD",
+          "capacity": "TBD"
+        }
+      ],
+      "product_count": 5
+    }
+  ],
+  "summary": {
+    "total_series": 3,
+    "total_products": 10,
+    "series_names": ["D3", "D5", "D7"]
+  }
+}
+
