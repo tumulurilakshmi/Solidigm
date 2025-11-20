@@ -1,20 +1,22 @@
 """
-Run complete home page validation
+Run Product Detail Page (PDP) validation
+Validates individual product pages like D3-S4620, D7-P5520, etc.
 """
 import sys
 from playwright.sync_api import sync_playwright
-from homepage_validator import HomePageValidator
-from home_page_report_generator import HomePageReportGenerator
+from pdp_validator import PDPValidator
+from pdp_report_generator import PDPReportGenerator
 
 
 def main():
+    # Default to D3-S4620 if no URL provided
     if len(sys.argv) > 1:
-        url = sys.argv[1]
+        product_url = sys.argv[1]
     else:
-        url = "https://www.solidigm.com/"
+        product_url = "https://www.solidigm.com/products/data-center/d3/s4620.html"
     
     print("=" * 100)
-    print(" " * 25 + "SOLIDIGM HOMEPAGE COMPREHENSIVE VALIDATION")
+    print(" " * 30 + "PRODUCT DETAIL PAGE (PDP) VALIDATION")
     print("=" * 100)
     
     playwright = sync_playwright().start()
@@ -24,13 +26,13 @@ def main():
     
     try:
         # Run validation
-        validator = HomePageValidator(page, url)
-        results = validator.validate_complete_homepage()
+        validator = PDPValidator(page)
+        results = validator.validate_pdp_page(product_url)
         
         # Generate Excel report
         if 'error' not in results:
             try:
-                report_gen = HomePageReportGenerator()
+                report_gen = PDPReportGenerator()
                 excel_file = report_gen.generate_excel_report(results)
                 print(f"\n[SUCCESS] Excel report saved: {excel_file}")
             except Exception as report_error:
@@ -42,23 +44,14 @@ def main():
         print("VALIDATION COMPLETE")
         print("="*100)
         
-        if 'error' not in results:
-            summary = results.get('summary', {})
-            print("\n[SUMMARY]")
-            print(f"  Carousels: {summary.get('carousel_count', 0)}")
-            print(f"  Featured Products: {summary.get('featured_products_count', 0)}")
-            print(f"  Product Cards: {summary.get('product_cards_count', 0)}")
-            print(f"  Articles: {summary.get('article_count', 0)}")
-            print(f"  Blade Components: {summary.get('blade_count', 0)}")
-            print(f"  Footer: {'Yes' if summary.get('footer_exists') else 'No'}")
-        
     except Exception as e:
         print(f"\n[ERROR] {str(e)}")
+        import traceback
+        traceback.print_exc()
     finally:
         browser.close()
 
 
 if __name__ == "__main__":
     main()
-
 

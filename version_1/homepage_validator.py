@@ -579,22 +579,21 @@ class HomePageValidator:
             footer_selectors = [
                 '.footer-content__main',
                 '.footer-content',
-                '.cmp-experiencefragment--footer',
                 'footer',
-                '[class*="footer"]',
-                '[role="contentinfo"]'
+                '[class*="footer"]'
             ]
             
             for selector in footer_selectors:
                 footer = self.page.locator(selector).first
                 if footer.count() > 0:
                     print(f"   [OK] Footer found using selector: {selector}")
-                    results['component_exists'] = True
                     break
             
             if footer is None or footer.count() == 0:
-                print("   [WARNING] Footer component not found with any selector")
+                print("   [INFO] Footer component not found")
                 return results
+            
+                results['component_exists'] = True
                 
             # Get container size
             try:

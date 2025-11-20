@@ -194,7 +194,7 @@ class CarouselValidator:
             if title_element.count() > 0:
                 slide_data['title'] = title_element.text_content() or ''
                 print(f"      Card {index+1} - Title: {slide_data['title'][:50]}")
-            
+                
                 # Get title font styles
                 try:
                     title_font = title_element.evaluate("""

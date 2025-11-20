@@ -31,41 +31,41 @@ class HomePageReportGenerator:
     def generate_excel_report(self, results: Dict) -> str:
         """Generate comprehensive Excel report for home page validation"""
         try:
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            filename = f"{self.output_dir}/homepage_report_{timestamp}.xlsx"
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"{self.output_dir}/homepage_report_{timestamp}.xlsx"
             
             print(f"\n[EXCEL] Generating report: {filename}")
-            
-            wb = Workbook()
-            wb.remove(wb.active)
-            
-            # Summary Sheet
+        
+        wb = Workbook()
+        wb.remove(wb.active)
+        
+        # Summary Sheet
             try:
-                self._create_summary_sheet(wb, results)
+        self._create_summary_sheet(wb, results)
                 print(f"[EXCEL] Summary sheet created")
             except Exception as e:
                 print(f"[WARNING] Error creating summary sheet: {str(e)}")
-            
-            # Navigation Sheet
-            if results.get('navigation'):
+        
+        # Navigation Sheet
+        if results.get('navigation'):
                 try:
-                    self._create_navigation_sheet(wb, results['navigation'])
+            self._create_navigation_sheet(wb, results['navigation'])
                     print(f"[EXCEL] Navigation sheet created")
                 except Exception as e:
                     print(f"[WARNING] Error creating navigation sheet: {str(e)}")
-            
-            # Carousel Sheet
-            if results.get('carousel'):
+        
+        # Carousel Sheet
+        if results.get('carousel'):
                 try:
-                    self._create_carousel_sheet(wb, results['carousel'])
+            self._create_carousel_sheet(wb, results['carousel'])
                     print(f"[EXCEL] Carousel sheet created")
                 except Exception as e:
                     print(f"[WARNING] Error creating carousel sheet: {str(e)}")
-            
-            # Featured Products Sheet
-            if results.get('featured_products'):
+        
+        # Featured Products Sheet
+        if results.get('featured_products'):
                 try:
-                    self._create_featured_products_sheet(wb, results['featured_products'])
+            self._create_featured_products_sheet(wb, results['featured_products'])
                     print(f"[EXCEL] Featured Products sheet created")
                 except Exception as e:
                     print(f"[WARNING] Error creating featured products sheet: {str(e)}")
@@ -77,19 +77,19 @@ class HomePageReportGenerator:
             #         print(f"[EXCEL] Product Cards sheet created")
             #     except Exception as e:
             #         print(f"[WARNING] Error creating product cards sheet: {str(e)}")
-            
-            # Article List Sheet
-            if results.get('article_list'):
+        
+        # Article List Sheet
+        if results.get('article_list'):
                 try:
-                    self._create_article_list_sheet(wb, results['article_list'])
+            self._create_article_list_sheet(wb, results['article_list'])
                     print(f"[EXCEL] Article List sheet created")
                 except Exception as e:
                     print(f"[WARNING] Error creating article list sheet: {str(e)}")
-            
-            # Blade Components Sheet
-            if results.get('blade_components'):
+        
+        # Blade Components Sheet
+        if results.get('blade_components'):
                 try:
-                    self._create_blade_components_sheet(wb, results['blade_components'])
+            self._create_blade_components_sheet(wb, results['blade_components'])
                     print(f"[EXCEL] Blade Components sheet created")
                 except Exception as e:
                     print(f"[WARNING] Error creating blade components sheet: {str(e)}")
@@ -120,9 +120,9 @@ class HomePageReportGenerator:
             
             # Save the workbook
             try:
-                wb.save(filename)
+        wb.save(filename)
                 print(f"\n[EXCEL] [OK] Report successfully saved: {filename}")
-                return filename
+        return filename
             except Exception as e:
                 print(f"\n[ERROR] Failed to save Excel file: {str(e)}")
                 raise
@@ -1738,6 +1738,10 @@ class HomePageReportGenerator:
                 ws.cell(row=row, column=2, value=input_field.get('placeholder', ''))
                 row += 1
                 
+                ws.cell(row=row, column=1, value="Input Name:").font = Font(bold=True)
+                ws.cell(row=row, column=2, value=input_field.get('name', ''))
+                row += 1
+                
                 ws.cell(row=row, column=1, value="Is Required:").font = Font(bold=True)
                 ws.cell(row=row, column=2, value='Yes' if input_field.get('required') else 'No')
                 row += 1
@@ -1746,6 +1750,17 @@ class HomePageReportGenerator:
                     ws.cell(row=row, column=1, value="Data Search Page:").font = Font(bold=True)
                     ws.cell(row=row, column=2, value=input_field.get('data_search_page', ''))
                     row += 1
+            
+            # Hidden input details
+            hidden_input = form.get('hidden_input', {})
+            if hidden_input:
+                ws.cell(row=row, column=1, value="Hidden Input Name:").font = Font(bold=True)
+                ws.cell(row=row, column=2, value=hidden_input.get('name', ''))
+                row += 1
+                
+                ws.cell(row=row, column=1, value="Hidden Input Value:").font = Font(bold=True)
+                ws.cell(row=row, column=2, value=hidden_input.get('value', ''))
+                row += 1
             
             row += 1
         

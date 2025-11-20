@@ -4,6 +4,9 @@ Navigation Menu Validator for Solidigm Website
 import time
 from typing import Dict, List
 from playwright.sync_api import Page
+from excel_report_generator import ExcelReportGenerator
+
+
 class NavigationValidator:
     def __init__(self, page: Page, base_url: str):
         self.page = page
